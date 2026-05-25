@@ -626,8 +626,27 @@
         </div>
       </div>
     </div>
-    <div class="contact-form">
-      <div class="form-row">
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="65217882-1507-4ab5-8a27-1503a72b64bc">
+
+  <div class="form-row">
+    <div class="fg">
+      <label>Name</label>
+      <input type="text" name="name" required placeholder="Enter your name">
+    </div>
+    <div class="fg">
+      <label>Email</label>
+      <input type="email" name="email" required placeholder="Enter your email">
+    </div>
+  </div>
+
+  <div class="fg">
+    <label>Message</label>
+    <textarea name="message" required placeholder="Type your message here..."></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
         <div class="fg"><label>Full Name</label><input type="text" placeholder="John Doe"/></div>
         <div class="fg"><label>Email</label><input type="email" placeholder="john@example.com"/></div>
       </div>
