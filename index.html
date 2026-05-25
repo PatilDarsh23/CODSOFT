@@ -645,16 +645,26 @@
     <textarea name="message" required placeholder="Type your message here..."></textarea>
   </div>
 
-  <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
-        <div class="fg"><label>Full Name</label><input type="text" placeholder="John Doe"/></div>
-        <div class="fg"><label>Email</label><input type="email" placeholder="john@example.com"/></div>
-      </div>
-      <div class="fg"><label>Subject</label><input type="text" placeholder="Internship Opportunity / Collaboration"/></div>
-      <div class="fg"><label>Message</label><textarea placeholder="Tell me about the opportunity..."></textarea></div>
-      <button class="btn btn-primary" style="width:fit-content">Send Message ✉️</button>
+ <div class="form-row">
+    <div class="fg">
+      <label>Full Name</label>
+      <input type="text" name="name" required placeholder="John Doe"/>
+    </div>
+    <div class="fg">
+      <label>Email</label>
+      <input type="email" name="email" required placeholder="john@example.com"/>
     </div>
   </div>
+  <div class="fg">
+    <label>Subject</label>
+    <input type="text" name="subject" placeholder="Internship Opportunity / Collaboration"/>
+  </div>
+  <div class="fg">
+    <label>Message</label>
+    <textarea name="message" required placeholder="Tell me about the opportunity..."></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" style="width:fit-content">Send Message ✉️</button>
+</form>
 </section>
 
 <!-- FOOTER -->
