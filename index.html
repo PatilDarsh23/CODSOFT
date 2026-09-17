@@ -49,7 +49,7 @@
       font-family: 'Instrument Serif', serif;
       font-size: 1.5rem; letter-spacing: -0.01em;
       background: linear-gradient(135deg, var(--accent-bright), var(--teal));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
@@ -90,7 +90,7 @@
     }
     .hero-name-gradient {
       background: linear-gradient(135deg, var(--accent-bright) 0%, var(--teal) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .hero-role {
       font-family: 'Geist Mono', monospace;
@@ -180,12 +180,10 @@
     .about-text p { color: var(--muted); line-height: 1.85; margin-bottom: 1.1rem; font-size: 0.98rem; }
     .about-text strong { color: var(--text); }
     .stats-row { display: flex; gap: 2.5rem; margin-top: 2rem; flex-wrap: wrap; }
-    .stat { }
-    .stat-num { font-family: 'Instrument Serif', serif; font-size: 2.5rem; line-height: 1; background: linear-gradient(135deg, var(--accent-bright), var(--teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-num { font-family: 'Instrument Serif', serif; font-size: 2.5rem; line-height: 1; background: linear-gradient(135deg, var(--accent-bright), var(--teal)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
 
     /* ── EXPERIENCE ── */
-    #experience { }
     .timeline { position: relative; padding-left: 2rem; }
     .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(180deg, var(--accent), var(--teal), transparent); }
     .exp-item { position: relative; margin-bottom: 2.5rem; }
@@ -230,10 +228,11 @@
     .cert-issuer { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; font-family: 'Geist Mono', monospace; }
 
     /* ── PROJECTS ── */
-    #projects { }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
     .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
     .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); border-color: var(--border-bright); }
+    .featured-project { border-color: rgba(45,226,196,0.35); }
+    .featured-project:hover { border-color: var(--teal); }
     .project-thumb { height: 170px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; position: relative; overflow: hidden; }
     .project-thumb::after { content: ''; position: absolute; inset: 0; }
     .thumb-purple::after { background: linear-gradient(135deg, #12103a, #2d1b69); }
@@ -580,6 +579,17 @@
         <p class="project-desc">A responsive, dark-themed portfolio website showcasing skills, projects, and experience with smooth animations and modern UI design.</p>
         <div class="project-links">
           <a href="https://www.linkedin.com/in/darshan-patil-63b217274/" target="_blank" class="project-link">LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card featured-project">
+      <div class="project-thumb thumb-teal"><span class="project-emoji">☁️</span></div>
+      <div class="project-body">
+        <div class="project-tags"><span class="project-tag">AWS</span><span class="project-tag">Cloud</span><span class="project-tag">Monitoring</span><span class="project-tag">DevOps</span></div>
+        <div class="project-title">AWS Sandbox Canary</div>
+        <p class="project-desc">From Local Oops to Cloud Wake-Up Call: Building a 5-Minute Zero-Cost Canary for Your AWS Sandbox.</p>
+        <div class="project-links">
+          <a href="https://builder.aws.com/content/3JOzpvuNXJkkdlwr7AVyF1qsoYB/from-local-oops-to-cloud-wake-up-call-building-a-5-minute-zero-cost-canary-for-your-aws-sandbox" target="_blank" rel="noopener noreferrer" class="project-link">Read Article ↗</a>
         </div>
       </div>
     </div>
