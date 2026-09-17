@@ -387,7 +387,6 @@
     </div>
   </div>
 </section>
-
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-eyebrow">My Journey</div>
@@ -668,6 +667,17 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.08 });
   reveals.forEach(r => observer.observe(r));
+
+  function filterProjects(category) {
+    const cards = document.querySelectorAll('.projects-grid .project-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
 </script>
 </body>
 </html>
