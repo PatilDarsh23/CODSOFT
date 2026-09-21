@@ -369,101 +369,6 @@
     .featured-project:hover { border-color: var(--accent); }
     .project-link { border-radius: 3px; border-color: rgba(79,255,224,0.4); }
     footer { border-top: 2px solid var(--accent); }
-
-    /* AURORA GLASSMORPHISM */
-    :root {
-      --bg: #070916;
-      --surface: rgba(14,18,40,0.72);
-      --card: rgba(20,26,55,0.58);
-      --card2: rgba(31,39,78,0.65);
-      --accent: #8b7cff;
-      --accent-bright: #c7c0ff;
-      --gold: #ffd27a;
-      --teal: #65f6e0;
-      --rose: #ff79b8;
-      --text: #f5f5ff;
-      --muted: #a5aac9;
-      --border: rgba(190,203,255,0.16);
-      --border-bright: rgba(190,203,255,0.42);
-    }
-    body {
-      background-color: var(--bg);
-      background-image: radial-gradient(circle at 20% 10%, rgba(112,87,255,0.14), transparent 28%), radial-gradient(circle at 85% 38%, rgba(0,221,211,0.1), transparent 25%), linear-gradient(135deg, #070916, #0d1025 55%, #080b1c);
-      background-size: auto;
-    }
-    body::after {
-      content: '';
-      position: fixed;
-      inset: -20%;
-      z-index: -1;
-      pointer-events: none;
-      background: radial-gradient(ellipse at 20% 20%, rgba(123,104,238,0.2), transparent 32%), radial-gradient(ellipse at 76% 30%, rgba(101,246,224,0.12), transparent 30%), radial-gradient(ellipse at 55% 85%, rgba(255,121,184,0.12), transparent 28%);
-      filter: blur(42px);
-      animation: auroraDrift 18s ease-in-out infinite alternate;
-    }
-    @keyframes auroraDrift {
-      0% { transform: translate3d(-3%, -2%, 0) scale(1); }
-      50% { transform: translate3d(3%, 2%, 0) scale(1.08); }
-      100% { transform: translate3d(-1%, 4%, 0) scale(1.02); }
-    }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(var(--accent), var(--teal)); }
-    nav {
-      background: rgba(8,10,27,0.58);
-      border-bottom: 1px solid rgba(190,203,255,0.2);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.16);
-    }
-    .nav-logo { color: var(--text); background: linear-gradient(120deg, var(--teal), var(--accent-bright), var(--rose)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .nav-links a:hover { color: var(--teal); }
-    .nav-cta { background: rgba(139,124,255,0.22); border: 1px solid rgba(199,192,255,0.48); color: var(--text) !important; box-shadow: inset 0 1px rgba(255,255,255,0.15), 0 8px 24px rgba(93,76,220,0.22); }
-    .hero-glow { filter: blur(110px); animation: glowFloat 10s ease-in-out infinite alternate; }
-    .glow1 { background: rgba(126,92,255,0.2); }
-    .glow2 { background: rgba(40,235,215,0.12); animation-delay: -4s; }
-    @keyframes glowFloat { from { transform: translate3d(-12px, 8px, 0) scale(0.96); } to { transform: translate3d(18px, -14px, 0) scale(1.06); } }
-    .hero-badge { background: rgba(255,210,122,0.1); border-color: rgba(255,210,122,0.32); color: var(--gold); box-shadow: inset 0 1px rgba(255,255,255,0.12); }
-    .badge-dot { background: var(--gold); box-shadow: 0 0 12px var(--gold); }
-    .hero-name-gradient { background: linear-gradient(120deg, var(--teal), var(--accent-bright) 55%, var(--rose)); background-clip: text; -webkit-background-clip: text; }
-    .btn { border-radius: 12px; }
-    .btn-primary { background: linear-gradient(135deg, #8173ff, #a76dff); color: #fff; box-shadow: 0 12px 30px rgba(111,92,255,0.3), inset 0 1px rgba(255,255,255,0.25); }
-    .btn-primary:hover { box-shadow: 0 16px 38px rgba(111,92,255,0.45), inset 0 1px rgba(255,255,255,0.32); }
-    .btn-ghost, .btn-teal { background: rgba(255,255,255,0.045); backdrop-filter: blur(14px); }
-    .btn-ghost { border-color: rgba(190,203,255,0.3); }
-    .btn-teal { border-color: rgba(101,246,224,0.35); }
-    .hero-photo-ring { border: 1px solid rgba(101,246,224,0.42); background: linear-gradient(135deg, rgba(139,124,255,0.16), rgba(101,246,224,0.08)); animation: ringPulse 6s ease-in-out infinite; }
-    .hero-photo-ring2 { border: 1px solid rgba(255,121,184,0.25); }
-    @keyframes ringPulse { 50% { transform: scale(1.025) rotate(1deg); opacity: 0.7; } }
-    .hero-photo { border: 1px solid rgba(220,226,255,0.35); border-radius: 24px; box-shadow: 0 24px 80px rgba(42,31,130,0.35), inset 0 1px rgba(255,255,255,0.22); }
-    .hero-photo img { filter: saturate(0.92) contrast(1.04); }
-    .hero-photo-tag, .hero-floating-card { background: rgba(23,29,65,0.52); border: 1px solid rgba(190,203,255,0.25); box-shadow: 0 18px 50px rgba(0,0,0,0.22), inset 0 1px rgba(255,255,255,0.14); backdrop-filter: blur(18px) saturate(1.3); }
-    .float-card-1 { animation: floatOne 5s ease-in-out infinite; }
-    .float-card-2 { animation: floatTwo 6s ease-in-out infinite; }
-    @keyframes floatOne { 50% { transform: translateY(-10px) rotate(-2deg); } }
-    @keyframes floatTwo { 50% { transform: translateY(9px) rotate(2deg); } }
-    .float-num { color: var(--teal); }
-    .section-eyebrow { color: var(--teal); }
-    .section-eyebrow::after { background: linear-gradient(90deg, var(--teal), transparent); }
-    .section-title { text-transform: none; }
-    #about, #skills, #contact { background: rgba(10,14,33,0.38); }
-    .about-img { border: 1px solid rgba(190,203,255,0.28); border-radius: 24px; box-shadow: 0 24px 65px rgba(34,28,116,0.3), inset 0 1px rgba(255,255,255,0.18); }
-    .about-badge { background: rgba(255,210,122,0.88); border-radius: 12px; box-shadow: 0 8px 30px rgba(255,185,83,0.2); }
-    .exp-card, .skill-cat, .cert-card, .project-card { background: linear-gradient(145deg, rgba(32,40,83,0.58), rgba(15,20,47,0.48)); border: 1px solid rgba(190,203,255,0.16); border-radius: 18px; box-shadow: 0 18px 55px rgba(0,0,0,0.13), inset 0 1px rgba(255,255,255,0.1); backdrop-filter: blur(18px) saturate(1.25); }
-    .exp-card:hover, .project-card:hover { border-color: rgba(101,246,224,0.45); transform: translateY(-7px); box-shadow: 0 24px 65px rgba(27,20,103,0.3), inset 0 1px rgba(255,255,255,0.16); }
-    .exp-company, .project-link { color: var(--teal); }
-    .exp-item::before { background: var(--teal); box-shadow: 0 0 14px var(--teal); }
-    .pill, .project-tag { border-radius: 50px; background: rgba(139,124,255,0.12); border-color: rgba(190,203,255,0.2); color: var(--accent-bright); }
-    .pill-teal { background: rgba(101,246,224,0.1); border-color: rgba(101,246,224,0.25); color: var(--teal); }
-    .skill-tag { border-radius: 10px; background: rgba(255,255,255,0.045); border-color: rgba(190,203,255,0.15); }
-    .skill-tag:hover, .cert-card:hover { border-color: rgba(101,246,224,0.45); color: var(--teal); }
-    .featured-project { border-color: rgba(101,246,224,0.4); }
-    .featured-project:hover { border-color: var(--teal); }
-    .project-link { border-radius: 8px; border-color: rgba(101,246,224,0.25); }
-    .c-icon, .fg input, .fg textarea { background: rgba(255,255,255,0.045); border-color: rgba(190,203,255,0.16); border-radius: 12px; backdrop-filter: blur(14px); }
-    .fg input:focus, .fg textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(101,246,224,0.1); }
-    footer { background: rgba(6,8,20,0.72); border-top: 1px solid rgba(190,203,255,0.18); }
-    .social-btn { background: rgba(255,255,255,0.05); border-color: rgba(190,203,255,0.18); border-radius: 12px; }
-    .social-btn:hover { border-color: var(--teal); box-shadow: 0 8px 24px rgba(101,246,224,0.12); }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
-    }
   </style>
 </head>
 <body>
@@ -477,7 +382,7 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="https://patildarsh23.github.io/CODSOFT/resume.pdf" download>Resume ↓</a></li>
+    <li><a href="resume.pdf" download>Resume ↓</a></li>
     <li><a href="#contact" class="nav-cta">Hire Me</a></li>
   </ul>
 </nav>
@@ -495,10 +400,9 @@
       <a href="#projects" class="btn btn-primary">View My Work</a>
       <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       <a href="https://www.linkedin.com/in/darshan-patil-63b217274/" target="_blank" class="btn btn-teal">LinkedIn ↗</a>
-      <a href="https://patildarsh23.github.io/CODSOFT/resume.pdf" download class="btn btn-primary">Download Resume ↓</a>
+      <a href="resume.pdf" download class="btn btn-primary">Download Resume ↓</a>
     </div>
   </div>
-</section>
   <div class="hero-right">
     <div class="hero-photo-wrap">
       <div class="hero-photo-ring2"></div>
@@ -792,30 +696,16 @@
         </div>
       </div>
     </div>
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="65217882-1507-4ab5-8a27-1503a72b64bc">
-
-  <div class="form-row">
-    <div class="fg">
-      <label>Name</label>
-      <input type="text" name="name" required placeholder="Enter your name">
-    </div>
-    <div class="fg">
-      <label>Email</label>
-      <input type="email" name="email" required placeholder="Enter your email">
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="fg"><label>Full Name</label><input type="text" placeholder="John Doe"/></div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="john@example.com"/></div>
+      </div>
+      <div class="fg"><label>Subject</label><input type="text" placeholder="Internship Opportunity / Collaboration"/></div>
+      <div class="fg"><label>Message</label><textarea placeholder="Tell me about the opportunity..."></textarea></div>
+      <button class="btn btn-primary" style="width:fit-content">Send Message ✉️</button>
     </div>
   </div>
-
-  <div class="fg">
-    <label>Message</label>
-    <textarea name="message" required placeholder="Type your message here..."></textarea>
-  </div>
-  <div class="fg">
-    <label>Subject</label>
-    <input type="text" name="subject" placeholder="Internship Opportunity / Collaboration"/>
-  </div>
-  <button type="submit" class="btn btn-primary" style="width:fit-content">Send Message ✉️</button>
-</form>
 </section>
 
 <!-- FOOTER -->
